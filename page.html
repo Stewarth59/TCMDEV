@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script>
+function validateForm() {
+    var x = document.forms["BYOMDForm"]["title"].value;
+    if (x == "") {
+        alert("Title field must be filled out.");
+        return false;
+    } else
+     var y = document.forms["BYOMDForm"]["Group"].value;
+    if (y == "") {
+        alert("Group must be selected.");
+        return false;
+    } else
+     var w = document.forms["BYOMDForm"]["ReqAction"].value;
+    if (w == "") {
+        alert("Action type must be selected.");
+        return false;
+    } else
+     var z = document.forms["BYOMDForm"]["Platform"].value;
+    if (z == "") {
+        alert("Platform type must be selected.");
+        return false;
+    } else
+   var xx = document.forms["BYOMDForm"]["needDate"].value;
+    if (xx == "") {
+        alert("Date Needed must be entered.");
+        return false;
+    }
+}
+</script>
+
+  <title>Input</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <style>
+  .fakeimg {
+      border: 1px solid red;
+      background-color: lightgrey;
+  }
+  .fieldimg {
+      height: 200px;
+      background: #ffffff;
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">RequestIT</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="Trackpage.html">Request Status</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="helppage.html">Help</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="page-header">
+    <h3><img src="RequestIT.jpg" class="img-thumbnail" alt="REQUEST" width="120" height="120">
+  Bring Your Own Mobile Device Request
+  <img src="LIT.jpg" class="img-thumbnail" alt="LIT" width="100" height="100"></h3>
+  <p>(Form #33006)</p>
+  <p>You are logged in as Stewart Henderson (n-number)</p>
+  </div>
+</div>
+
+ <div class="container">
+     <div class="fakeimg">
+<h2>Form Description</h2>
+This Form is for the activation and de-activation of personal mobile devices intended for business use<br>
+      (BYOMD). Here is the link which will help you identify if this service is right for you. <br>
+      You will be asked to accept these specific program "Terms and Conditions" later in this form to be enrolled in this program
+</div>
+</div>
+
+   <br><br>
+
+   <div class="container">
+   <div class="fakeimg">
+     <h2>Standard Fields</h2>
+   <form name="BYOMDForm" action="Success.html" onsubmit="return validateForm()" method="get">
+   Title:
+   <input type="text" name="title">
+   <br><br>
+   Group:
+   <select name="Group">
+        <option value=""></option>
+        <option value="Commercial Insurance">Commercial Insurance</option>
+        <option value="Corporate">Corporate</option>
+        <option value="Enterprise Information Security">Enterprise Information Security</option>
+        <option value="Enterprise Technology Services">Enterprise Technology Services</option>
+        <option value="Global Specialty">Global Specialty</option>
+        <option value="Hosting Services">Hosting Services</option>
+        <option value="Investments">Investments</option>
+        <option value="Liberty International">Liberty International</option>
+        <option value="Personal Insurance">Personal Insurance</option>
+  </select>
+  <br><br>
+  Notify:
+   <input type="text" name="Notify">
+   <br><br>
+   </div>
+   </div>
+   <div class="container">
+   <div class="fakeimg">
+    <h2>Form Specific Fields</h2>
+   Requested Action:
+   <select id="ReqAction">
+       <option value=""></option>
+       <option value="Activation">Activation</option>
+       <option value="Upgraded Device">Upgrade Device</option>
+       <option value="Deactivation">Deactivation</option>
+   </select>
+   <br><br>
+
+
+  Platform:
+   <select name="Platform">
+        <option value=""></option>
+        <option value="AppleIOS">Apple/IOS</option>
+        <option value="Andriod">Andriod</option>
+        </select>
+        <br><br>
+
+  Date Needed:
+<input type="Date" name="Needdate">
+<br><br>
+</div>
+<input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
